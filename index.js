@@ -6,6 +6,6 @@ const bot = new TelegramApi(token, { polling: true });
 
 bot.on('message', msg => {
     if(msg.text.includes("@luniela")) {
-        bot.sendMessage(msg.from.id, "Да, вы абсолютно правы", {reply_to_message_id: msg.message_id});
+        bot.sendMessage(msg.chat.id, "Да, вы абсолютно правы", {reply_to_message_id: msg.message_id});
     }
 });
